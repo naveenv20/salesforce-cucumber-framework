@@ -1,6 +1,8 @@
 package com.qtpselenium.app.salesforce.util;
 
+import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.List;
 
 
 public class util {
@@ -10,7 +12,7 @@ public class util {
 	
 	
 	
-	public static Object[][] getdata(String testcasename, String suitename){
+	public static List<Hashtable<String,String>> getdata(String testcasename, String suitename){
 		
 		
 		
@@ -43,7 +45,7 @@ public class util {
 				}
 				System.out.println("Total rows of test data are  ::"+(rowsofdata+1));
 				
-				Object[][] data1=new Object[rowsofdata+1][1];
+				List<Hashtable<String,String>> data1=new ArrayList<Hashtable<String,String>>();
 				int r=0;
 		
 			
@@ -57,7 +59,8 @@ public class util {
 				datarow.put(xls_suite_testcase.getCellData("Data", colnum, testdataheaderrownum), xls_suite_testcase.getCellData("Data", colnum, rownum+1));
 			
 			}
-				data1[r][0]=datarow;
+			data1.add(datarow);
+				//data1[r][0]=datarow;
 				r++;
 			}
 				
@@ -65,8 +68,7 @@ public class util {
 				
 			System.out.println("Hello");	
 				
-		
-			
+	
 			return data1;
 			}	
 			

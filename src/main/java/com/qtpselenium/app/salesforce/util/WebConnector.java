@@ -3,11 +3,14 @@ package com.qtpselenium.app.salesforce.util;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class WebConnector {
@@ -20,8 +23,8 @@ public class WebConnector {
 	Properties OR=null;
 	Properties config=null;
 	public Hashtable<String,String> objdata;
-	Object[][] data;
-	
+	List<Hashtable<String,String>> data;
+	WebDriver d1;
 	public  WebConnector(){
 		if(OR==null){
 			System.out.println("12345");
@@ -36,20 +39,24 @@ public class WebConnector {
 				e.printStackTrace();
 			}	
 		System.out.println(objdata.get("Login_Button"));
-		Hashtable<String,String>abc=(Hashtable<String, String>) data[0][0];
-		System.out.println(abc.get("Username"));
+		
+		System.out.println(data.get(0).get("Username"));
 		
 		
 		}
 	}
 	
 	
-	public void openbrowser(){
-		
+	public void openbrowser(String browser){
+		if(data.get(0).get(browser).equalsIgnoreCase("Mozilla")){
+			d1=new FirefoxDriver();
+			d1.manage().window().maximize();
+			d1.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		}
 	}
 	
-	public void navigate(){
-		
+	public void navigate(String URL){
+		d1.get(data.get(0).get(URL));
 	}
 public void click(String identifier, WebDriver d1){
 		

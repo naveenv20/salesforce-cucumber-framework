@@ -18,6 +18,8 @@ WebConnector W1= new WebConnector();
 	public void I_go_to_salesforce(String url,String browser){
 		
 		System.out.println("I am going to salesforce"+url+"    "+browser);
+		W1.openbrowser(browser);
+		W1.navigate(url);
 	}
 	
 	@And("^I enter \"([^\"]*)\" as \"([^\"]*)\"$")

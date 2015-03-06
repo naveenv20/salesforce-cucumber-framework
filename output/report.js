@@ -1,59 +1,59 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("com\\qtpselenium\\app\\salesforce\\Login\\Login.feature");
 formatter.feature({
-  "line": 1,
-  "name": "Login into Salesforce",
-  "description": "\r\nIn order to work \r\nAs a Sales person\r\nI want to Login",
   "id": "login-into-salesforce",
-  "keyword": "Feature"
+  "description": "\r\nIn order to work \r\nAs a Sales person\r\nI want to Login",
+  "name": "Login into Salesforce",
+  "keyword": "Feature",
+  "line": 1
 });
 formatter.scenario({
-  "line": 8,
-  "name": "Logging into Salesforce",
-  "description": "",
   "id": "login-into-salesforce;logging-into-salesforce",
-  "type": "scenario",
-  "keyword": "Scenario"
+  "description": "",
+  "name": "Logging into Salesforce",
+  "keyword": "Scenario",
+  "line": 8,
+  "type": "scenario"
 });
 formatter.step({
-  "line": 10,
-  "name": "I go to \"http://salesforce.com\" on \"Mozilla\"",
-  "keyword": "Given "
+  "name": "I go to \"URL\" on \"Browser\"",
+  "keyword": "Given ",
+  "line": 10
 });
 formatter.step({
-  "line": 11,
   "name": "I enter \"Username\" as \"naveen_v201985@rediffmail.com\"",
-  "keyword": "And "
+  "keyword": "And ",
+  "line": 11
 });
 formatter.step({
-  "line": 12,
   "name": "I enter \"Password\" as \"greffendor8*\"",
-  "keyword": "And "
+  "keyword": "And ",
+  "line": 12
 });
 formatter.step({
-  "line": 13,
   "name": "I click on the \"loginbutton\"",
-  "keyword": "And "
+  "keyword": "And ",
+  "line": 13
 });
 formatter.step({
-  "line": 14,
   "name": "Login should be \"success\"",
-  "keyword": "Then "
+  "keyword": "Then ",
+  "line": 14
 });
 formatter.match({
   "arguments": [
     {
-      "val": "http://salesforce.com",
+      "val": "URL",
       "offset": 9
     },
     {
-      "val": "Mozilla",
-      "offset": 36
+      "val": "Browser",
+      "offset": 18
     }
   ],
   "location": "LoginTest.I_go_to_salesforce(String,String)"
 });
 formatter.result({
-  "duration": 892793644,
+  "duration": 19550152980,
   "status": "passed"
 });
 formatter.match({
@@ -70,7 +70,7 @@ formatter.match({
   "location": "LoginTest.I_enter(String,String)"
 });
 formatter.result({
-  "duration": 117819,
+  "duration": 309532,
   "status": "passed"
 });
 formatter.match({
@@ -87,7 +87,7 @@ formatter.match({
   "location": "LoginTest.I_enter(String,String)"
 });
 formatter.result({
-  "duration": 151892,
+  "duration": 305017,
   "status": "passed"
 });
 formatter.match({
@@ -100,7 +100,7 @@ formatter.match({
   "location": "LoginTest.I_clickonbutton(String)"
 });
 formatter.result({
-  "duration": 120692,
+  "duration": 197460,
   "status": "passed"
 });
 formatter.match({
@@ -113,7 +113,7 @@ formatter.match({
   "location": "LoginTest.then_login_should_be(String)"
 });
 formatter.result({
-  "duration": 112482,
+  "duration": 186787,
   "status": "passed"
 });
 });

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" tests="1">
+<testcase classname="Login into Salesforce" name="Logging into Salesforce" time="19.754351">
+<failure message="java.lang.AssertionError: expected:&lt;false&gt; but was:&lt;true&gt;&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at org.junit.Assert.failNotEquals(Assert.java:743)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:118)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#13;&#10;&#9;at com.qtpselenium.app.salesforce.Login.LoginTest.then_login_should_be(LoginTest.java:49)&#13;&#10;&#9;at ✽.Then &quot;searchtxtfld_identifier&quot; Text box should present(main\resource\com\qtpselenium\app\salesforce\Login\Login.feature:14)&#13;&#10;"><![CDATA[Given I go to "URL" on "Browser"......................................................passed
+And I enter "Username_identifier" as "Username"...............................................passed
+And I enter "Password_identifier" as "Password"...............................................passed
+And I click on the "Login_Button"......................................................passed
+Then "searchtxtfld_identifier" Text box should present...........................................failed
+
+StackTrace:
+java.lang.AssertionError: expected:<false> but was:<true>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.qtpselenium.app.salesforce.Login.LoginTest.then_login_should_be(LoginTest.java:49)
+	at ✽.Then "searchtxtfld_identifier" Text box should present(main\resource\com\qtpselenium\app\salesforce\Login\Login.feature:14)
+]]></failure>
+</testcase>
+</testsuite>

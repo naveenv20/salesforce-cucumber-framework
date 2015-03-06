@@ -66,7 +66,7 @@ public class util {
 				
 				
 				
-			System.out.println("Hello");	
+			System.out.println(data1);	
 				
 	
 			return data1;
@@ -80,8 +80,10 @@ public class util {
 		Xls_Reader xls_suite_testcase=new Xls_Reader(System.getProperty("user.dir")+"\\src\\main\\java\\com\\qtpselenium\\app\\salesforce\\testdata\\"+suitename+".xlsx");
 		
 		int rownum;
+		System.out.println("*****"+xls_suite_testcase.getRowCount("ObjectData"));
 		for( rownum=0;rownum<xls_suite_testcase.getRowCount("ObjectData");rownum++){
 			if(xls_suite_testcase.getCellData("ObjectData", 0, rownum).equalsIgnoreCase(testcasename))
+				System.out.println("Test case found   :"+testcasename);
 				break;
 			
 		}

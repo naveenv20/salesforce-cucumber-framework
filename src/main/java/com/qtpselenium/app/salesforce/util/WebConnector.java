@@ -24,8 +24,9 @@ public class WebConnector {
 	Properties config=null;
 	public Hashtable<String,String> objdata;
 	List<Hashtable<String,String>> data;
-	WebDriver d1;
-	public  WebConnector(){
+public static WebDriver d1;
+
+	public  void init(){
 		if(OR==null){
 			System.out.println("12345");
 			OR= new Properties();
@@ -48,6 +49,9 @@ public class WebConnector {
 	
 	
 	public void openbrowser(String browser){
+		
+		//Calling the initialisation function ********************
+		init();
 		if(data.get(0).get(browser).equalsIgnoreCase("Mozilla")){
 			d1=new FirefoxDriver();
 			d1.manage().window().maximize();
@@ -58,15 +62,15 @@ public class WebConnector {
 	public void navigate(String URL){
 		d1.get(data.get(0).get(URL));
 	}
-public void click(String identifier, WebDriver d1){
+public void click(String identifier){
 		
 		d1.findElement(By.xpath(objdata.get(identifier))).click();
 		
 	}
 	
-public void type(String identifier, String datatotype,WebDriver d1){
+public void type(String identifier, String datatotype){
 	d1.findElement(By.xpath(objdata.get(identifier))).clear();
-	d1.findElement(By.xpath(objdata.get(identifier))).sendKeys(datatotype);
+	d1.findElement(By.xpath(objdata.get(identifier))).sendKeys(data.get(0).get(datatotype));
 }
 
 public void select(String identifier, String valuetoselect,WebDriver d1){
@@ -80,5 +84,15 @@ public void selectradio(String identifier, String valuetoselect,WebDriver d1){
 	d1.findElement(By.xpath(objdata.get(identifier))).click();
 }
 	
+public boolean elementcount(String object)	{
+	int count;
+	count=d1.findElements(By.xpath(objdata.get(object))).size();
+	if(count>0)
+		return true;
+		else
+			return false;
 	
+}
+
+
 }

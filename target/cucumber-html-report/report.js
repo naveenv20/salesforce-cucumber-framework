@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("com\\qtpselenium\\app\\salesforce\\Login\\Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("main\\resource\\com\\qtpselenium\\app\\salesforce\\Login\\Login.feature");
 formatter.feature({
   "line": 1,
   "name": "Login into Salesforce",
@@ -53,7 +53,7 @@ formatter.match({
   "location": "LoginTest.I_go_to_salesforce(String,String)"
 });
 formatter.result({
-  "duration": 8063294029,
+  "duration": 8350479100,
   "status": "passed"
 });
 formatter.match({
@@ -70,7 +70,7 @@ formatter.match({
   "location": "LoginTest.I_enter(String,String)"
 });
 formatter.result({
-  "duration": 948616887,
+  "duration": 832039433,
   "status": "passed"
 });
 formatter.match({
@@ -87,7 +87,7 @@ formatter.match({
   "location": "LoginTest.I_enter(String,String)"
 });
 formatter.result({
-  "duration": 445011057,
+  "duration": 380125021,
   "status": "passed"
 });
 formatter.match({
@@ -100,7 +100,7 @@ formatter.match({
   "location": "LoginTest.I_clickonbutton(String)"
 });
 formatter.result({
-  "duration": 130220364,
+  "duration": 163940726,
   "status": "passed"
 });
 formatter.match({
@@ -113,8 +113,8 @@ formatter.match({
   "location": "LoginTest.then_login_should_be(String)"
 });
 formatter.result({
-  "duration": 10033037661,
-  "error_message": "junit.framework.AssertionFailedError: expected:\u003cfalse\u003e but was:\u003ctrue\u003e\r\n\tat junit.framework.Assert.fail(Assert.java:57)\r\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:174)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:181)\r\n\tat com.qtpselenium.app.salesforce.Login.LoginTest.then_login_should_be(LoginTest.java:48)\r\n\tat ✽.Then \"searchtxtfld_identifier\" Text box should present(com\\qtpselenium\\app\\salesforce\\Login\\Login.feature:14)\r\n",
+  "duration": 10027766545,
+  "error_message": "java.lang.AssertionError: expected:\u003cfalse\u003e but was:\u003ctrue\u003e\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\r\n\tat org.junit.Assert.assertEquals(Assert.java:118)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat com.qtpselenium.app.salesforce.Login.LoginTest.then_login_should_be(LoginTest.java:49)\r\n\tat ✽.Then \"searchtxtfld_identifier\" Text box should present(main\\resource\\com\\qtpselenium\\app\\salesforce\\Login\\Login.feature:14)\r\n",
   "status": "failed"
 });
 });

@@ -8,7 +8,7 @@ I want to Login
 Scenario: Logging into Salesforce
 
 Given I go to "URL" on "Browser"
-And I enter "Username" as "naveen_v201985@rediffmail.com" 
-And I enter "Password" as "greffendor8*"
-And I click on the "loginbutton"
-Then Login should be "success"
+And I enter "Username_identifier" as "Username" 
+And I enter "Password_identifier" as "Password"
+And I click on the "Login_Button"
+Then "searchtxtfld_identifier" Text box should present
